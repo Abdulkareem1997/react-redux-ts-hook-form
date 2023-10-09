@@ -1,0 +1,70 @@
+.dash-container{
+    height: 100%;
+
+    .header-text{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .d-flex{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .filter-container{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+
+        .add-btn{
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            text-transform: uppercase;
+            p{
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .list-wrapper{
+        padding: 10px 0;
+
+        .MuiTable-root{
+            background-color: #fff;
+            border-radius: 5px;
+
+            .MuiTableHead-root{
+                .MuiTableCell-root{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .MuiTableBody-root{
+            .MuiTableCell-root{
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .status-tag{
+                padding: 4px 12px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .active-tag{
+                color: #00C853;
+                background-color: #B9F6CA;
+            }
+            .inactive-tag{
+                color: #DD2C00;
+                background-color: #FF9E80;
+            }
+        }
+    }
+}

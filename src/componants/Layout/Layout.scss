@@ -1,0 +1,39 @@
+.layout-container {
+    width: 100%;
+    height: calc(100vh - 40px);
+    display: flex;
+    gap: 10px;
+
+    .side-nav-container{
+        width: 20%;
+        background-color: #27374D;
+        padding: 20px;
+        color: #fff;
+        height: 100%;
+        position: relative;
+
+        .nav-wrapper{
+            display: flex;
+            gap: 10px;
+            padding: 10px 0px;
+            align-items: center;
+            cursor: pointer;
+
+            .nav-text{
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+        .logout-cont{
+            position: absolute;
+            bottom: 50px;
+        }
+    }
+
+    .main-container{
+        width: 80%;
+        padding: 20px;
+        height: 100%;
+    }
+}
