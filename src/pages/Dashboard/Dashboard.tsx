@@ -4,8 +4,10 @@ import './Dashboard.scss'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AddIcon from '@mui/icons-material/Add';
 import { employeeList, userType } from '../../utils/constants';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
+    const navigate = useNavigate()
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -23,7 +25,7 @@ const Dashboard: React.FC = () => {
         <Box className="dash-container">
             <Typography className='header-text' >Dashboard</Typography>
             <Box className="filter-container">
-                <Button variant="contained" className='add-btn'>
+                <Button variant="contained" className='add-btn' onClick={() => navigate('/add-employee')}>
                     <AddIcon />
                     <Typography>New</Typography>
                 </Button>
