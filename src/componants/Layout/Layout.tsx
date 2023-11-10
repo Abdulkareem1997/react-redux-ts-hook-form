@@ -5,6 +5,7 @@ import HouseIcon from '@mui/icons-material/House';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { authLogout } from '../../redux/reducers/AuthReducer/AuthReducer'
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 type LayoutProps = {
 	children: React.ReactNode;
@@ -13,6 +14,7 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 
 	const handleLogout = () => {
 		dispatch(authLogout())
@@ -21,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<Box className='layout-container'>
 			<Box className='side-nav-container'>
-				<Box className="nav-wrapper">
+				<Box className="nav-wrapper" onClick={() => navigate('/dashboard')}>
 					<HouseIcon />
 					<Typography className='nav-text'>Dashbord</Typography>
 				</Box>
